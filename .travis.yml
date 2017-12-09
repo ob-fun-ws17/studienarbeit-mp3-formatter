@@ -16,6 +16,7 @@ addons:
   apt:
     packages:
       - libgmp-dev
+      - taglib_c
 
 before_install:
 # Download and unpack the stack executable
