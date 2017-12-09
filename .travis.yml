@@ -16,7 +16,6 @@ addons:
   apt:
     packages:
       - libgmp-dev
-      - taglib_c
 
 before_install:
 # Download and unpack the stack executable
@@ -37,7 +36,7 @@ deploy:
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
-  local_dir: $HADDOCK_ROOT/doc/html/Hangkell
+  local_dir: $HADDOCK_ROOT/doc/html/mp3-formatter
   on:
     branch: master
 
