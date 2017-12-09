@@ -16,7 +16,8 @@ addons:
   apt:
     packages:
       - libgmp-dev
-      - libtaglib-cil-dev
+      - taglib
+      #- libtaglib-cil-dev
       #- libtag1-dev
 
 before_install:
