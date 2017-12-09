@@ -1,5 +1,5 @@
 # Use new container infrastructure to enable caching
-sudo: false
+sudo: true
 
 # Do not choose a language; we provide our own build tools.
 language: generic
@@ -23,8 +23,7 @@ before_install:
 - mkdir -p ~/.local/bin
 - export PATH=$HOME/.local/bin:$PATH
 - travis_retry curl -L https://www.stackage.org/stack/linux-x86_64 | tar xz --wildcards --strip-components=1 -C ~/.local/bin '*/stack'
-- echo "$(pkg-config --libs --cflags taglib_c)"
-- echo "$(pkg-config --libs --cflags taglib)"
+- sudo find /usr/ -name "*taglib_c.pc"
 
 install:
 # Build dependencies
